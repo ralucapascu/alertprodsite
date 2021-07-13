@@ -3,35 +3,82 @@
 
 <head>
     <title>Alert Prod Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <style>
-        .navbar-items{
-            float: left;
-        }
-        li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-        #navbar{
-            background-color: black;
-            list-style-type: none;
-            margin: 0;
-         padding: 0;
-        overflow: hidden;
-        }
-    </style>
-    
-    <ul id="navbar">
-        <li class="navbar-items"><a href="#">Home</a>
-        </li>
-    </ul>
 
+        body{
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .navbar-items{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-items li{
+            float: left;
+            padding: 15px 0px;
+            margin: 0px 20px;
+            position: relative;
+        }
+        .navbar-items a{
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .navbar-items a::before{
+            content: '';
+            display: block;
+            height: 4px;
+            background-color: royalblue;
+            position: absolute;
+            top: 0;
+            width: 0%;
+            transition: all ease-in 250ms;
+        }
+
+        .navbar-items a:hover::before{
+            width: 100%;
+        }
+        
+    </style>
+   
+   <header>
+    <ul class="navbar-items">
+        <li>
+            <a href ="#">Home</a>
+        </li>
+        <li>
+            <a href = "#">Despre noi</a>
+        </li>
+        <li>
+            <a href = "#">Contact</a>
+        </li>
+        
+        
+    </ul>
+    </header>
+    
 </body>
     
 </html>
